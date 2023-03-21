@@ -12,3 +12,5 @@ npm run dev eery time change to UI (like Fonts you need to re run )
 vim database/database.sqlite
 
 php artisan migrate
+
+php artisan make:controller ProfilesControllers

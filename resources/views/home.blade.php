@@ -8,7 +8,7 @@
         </div>
         <div class="col-9 pt-5">
             <div><h1>
-                dineth_siriwardana
+                {{$user->name}}
                 </h1>
             </div>
             <div class="d-flex">
