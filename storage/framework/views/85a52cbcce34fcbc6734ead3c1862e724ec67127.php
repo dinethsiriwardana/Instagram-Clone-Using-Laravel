@@ -10,9 +10,17 @@
                     <?php echo e($user->username); ?>
 
                 </h1>
+
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('update',$user->profile)): ?>
                 <a href="/p/create">Add New Post</a>
+                <?php endif; ?>
+               
             </div>
-            <a href="/profile/<?php echo e($user->id); ?>/edit">Edit Profile</a>
+
+            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('update',$user->profile)): ?>
+                <a href="/profile/<?php echo e($user->id); ?>/edit">Edit Profile</a>
+            <?php endif; ?>
+            
             <div class="d-flex">
                 <div class = "pe-5"><strong><?php echo e($user->posts->count()); ?> </strong>posts</div>
                 <div class = "pe-5"><strong>492 </strong>followers</div>
