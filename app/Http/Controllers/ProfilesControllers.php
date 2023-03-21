@@ -8,13 +8,14 @@ use App\Models\User;
 
 class ProfilesControllers extends Controller
 {
-    public function index($user)
+    public function index(User $user)
 
     {
-        
-        $user = User::findOrFail($user);
+        return view('profiles.index',compact('user')); //home.blade.php
+    }
 
-        return view('profiles.index',['user'=>$user,]); //home.blade.php
+    public function edit(User $user){
+        return view('profiles.edit',compact('user'));
     }
 }
  

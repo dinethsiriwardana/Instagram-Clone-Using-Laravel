@@ -13,6 +13,7 @@
                 </h1>
                 <a href="/p/create">Add New Post</a>
             </div>
+            <a href="/profile/{{$user->id}}/edit">Edit Profile</a>
             <div class="d-flex">
                 <div class = "pe-5"><strong>{{$user->posts->count()}} </strong>posts</div>
                 <div class = "pe-5"><strong>492 </strong>followers</div>
@@ -27,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row pt-5">
         @foreach($user->posts as $post)
         <div class="col-4 pb-4">
             <a href="/p/{{$post->id}}">

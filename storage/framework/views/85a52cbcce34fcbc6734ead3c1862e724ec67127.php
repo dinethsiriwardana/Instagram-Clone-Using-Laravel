@@ -12,6 +12,7 @@
                 </h1>
                 <a href="/p/create">Add New Post</a>
             </div>
+            <a href="/p/create">Edit Profile</a>
             <div class="d-flex">
                 <div class = "pe-5"><strong><?php echo e($user->posts->count()); ?> </strong>posts</div>
                 <div class = "pe-5"><strong>492 </strong>followers</div>
@@ -27,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row pt-5">
         <?php $__currentLoopData = $user->posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div class="col-4 pb-4">
             <a href="/p/<?php echo e($post->id); ?>">
