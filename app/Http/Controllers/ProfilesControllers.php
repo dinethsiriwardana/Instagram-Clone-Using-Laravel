@@ -11,8 +11,9 @@ class ProfilesControllers extends Controller
     public function index($user)
 
     {
-        // dd($user);
-        $user = User::find($user);
+        
+        $user = User::findOrFail($user);
+
         return view('home',['user'=>$user,]); //home.blade.php
     }
 }

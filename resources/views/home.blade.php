@@ -8,7 +8,7 @@
         </div>
         <div class="col-9 pt-5">
             <div><h1>
-                {{$user->name}}
+                {{$user->username}}
                 </h1>
             </div>
             <div class="d-flex">
@@ -16,10 +16,14 @@
                 <div class = "pe-5"><strong>492 </strong>followers</div>
                 <div class = "pe-5"><strong>337 </strong>following</div>
             </div>
-            <div class="pt-4"><b>Dineth Siriwardana</b></div>
+            <div class="pt-4"><b>{{$user->profile->title}}</b></div>
             <div>
-                It's Only ONES & ZEROS</div>
+                {{$user->profile->description}}
             </div>
+            <div>
+              <a href="http://{{$user->profile->url}}" target="_blank" rel="noopener noreferrer">{{$user->profile->url}}</a> 
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-4">
