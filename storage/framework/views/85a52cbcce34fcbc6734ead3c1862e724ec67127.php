@@ -12,7 +12,7 @@
                 </h1>
                 <a href="/p/create">Add New Post</a>
             </div>
-            <a href="/p/create">Edit Profile</a>
+            <a href="/profile/<?php echo e($user->id); ?>/edit">Edit Profile</a>
             <div class="d-flex">
                 <div class = "pe-5"><strong><?php echo e($user->posts->count()); ?> </strong>posts</div>
                 <div class = "pe-5"><strong>492 </strong>followers</div>
