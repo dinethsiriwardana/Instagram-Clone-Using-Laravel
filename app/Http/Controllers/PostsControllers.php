@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use app\Models\User;
+use Image;
 
 class PostsControllers extends Controller
 {
@@ -22,18 +23,22 @@ class PostsControllers extends Controller
 
 // 
         $imagePath = (request('image')->store('uploads','public'));
+
+        $image = Image::make(public_path("storage/{$imagePath}")) -> fit(1200,1200);
+
+        $image->save();
+
         auth()->user()->posts()->create([
             'caption' => $data['caption'],
             'image' => $imagePath,
         ]);
 
-        /*
-        As Same as the
-        $post = new \App\Models\Post();
-        $post->caption = $data['caption'];
-        $post->save();
-        */
+
 
         return redirect('/profile/'. auth()->user()->id);
+    }
+    public function show($post)
+    {
+        dd($post);
     }
 }

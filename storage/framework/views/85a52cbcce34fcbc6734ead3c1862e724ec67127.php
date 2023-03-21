@@ -13,7 +13,7 @@
                 <a href="/p/create">Add New Post</a>
             </div>
             <div class="d-flex">
-                <div class = "pe-5"><strong>128 </strong>posts</div>
+                <div class = "pe-5"><strong><?php echo e($user->posts->count()); ?> </strong>posts</div>
                 <div class = "pe-5"><strong>492 </strong>followers</div>
                 <div class = "pe-5"><strong>337 </strong>following</div>
             </div>
@@ -29,8 +29,10 @@
     </div>
     <div class="row">
         <?php $__currentLoopData = $user->posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <div class="col-4">
-            <img src="/storage/<?php echo e($post->image); ?>" class="w-100 pt-1" srcset="">
+        <div class="col-4 pb-4">
+            <a href="/p/<?php echo e($post->id); ?>">
+                <img src="/storage/<?php echo e($post->image); ?>" class="w-100 pt-1" srcset="">
+            </a>
         </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
