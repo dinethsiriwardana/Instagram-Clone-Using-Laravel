@@ -15,6 +15,8 @@ php artisan migrate
 
 php artisan make:controller ProfilesControllers
 
+ php artisan storage:link
+
 $profile = new \App\Models\Profile();
 = App\Models\Profile {#3642}
 
@@ -32,3 +34,6 @@ $profile = new \App\Models\Profile();
 
 > $profile->save();
 = true
+
+
+composer require intervention/image
