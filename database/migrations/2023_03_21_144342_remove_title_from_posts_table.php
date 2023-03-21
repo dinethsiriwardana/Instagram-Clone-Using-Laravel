@@ -18,6 +18,7 @@ class RemoveTitleFromPostsTable extends Migration
         });
     }
     
+    
 
     /**
      * Reverse the migrations.

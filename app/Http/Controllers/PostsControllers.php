@@ -20,10 +20,8 @@ class PostsControllers extends Controller
             'image'=>['required','image'],
         ]);
 
-        // auth()->user()->posts()->create($data);
-
-        // $data = [    'title' => 'News Title',    'caption' => 'News Caption',    'image' => '/path/to/image',];
-
+// 
+        dd(request('image')->store('uploads','public'));
         auth()->user()->posts()->create($data);
 
 
