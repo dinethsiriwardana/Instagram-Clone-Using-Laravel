@@ -14,6 +14,7 @@ class ProfilesControllers extends Controller
         
         $user = User::findOrFail($user);
 
-        return view('home',['user'=>$user,]); //home.blade.php
+        return view('profiles.index',['user'=>$user,]); //home.blade.php
     }
 }
+ 
