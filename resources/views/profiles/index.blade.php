@@ -11,7 +11,7 @@
                 <h1>
                     {{$user->username}}
                 </h1>
-                <a href="">Add New Post</a>
+                <a href="/p/create">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class = "pe-5"><strong>128 </strong>posts</div>
@@ -28,15 +28,11 @@
         </div>
     </div>
     <div class="row">
+        @foreach($user->posts as $post)
         <div class="col-4">
-            <img src="/assets/11.jpeg" class="w-100 pt-1" srcset="">
+            <img src="/storage/{{$post->image}}" class="w-100 pt-1" srcset="">
         </div>
-        <div class="col-4">
-            <img src="/assets/2.jpeg" class="w-100 pt-1" srcset="">
-        </div>
-        <div class="col-4">
-            <img src="/assets/3.jpg" class="w-100 pt-1" srcset="">
-        </div>
+        @endforeach
     </div>
 </div>
 @endsection

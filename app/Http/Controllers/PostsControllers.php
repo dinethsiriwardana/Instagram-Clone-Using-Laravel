@@ -21,9 +21,11 @@ class PostsControllers extends Controller
         ]);
 
 // 
-        dd(request('image')->store('uploads','public'));
-        auth()->user()->posts()->create($data);
-
+        $imagePath = (request('image')->store('uploads','public'));
+        auth()->user()->posts()->create([
+            'caption' => $data['caption'],
+            'image' => $imagePath,
+        ]);
 
         /*
         As Same as the
@@ -32,6 +34,6 @@ class PostsControllers extends Controller
         $post->save();
         */
 
-        dd(request()->all());;
+        return redirect('/profile/'. auth()->user()->id);
     }
 }

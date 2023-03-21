@@ -17,8 +17,6 @@ class RemoveTitleFromPostsTable extends Migration
             // $table->dropColumn('title');
         });
     }
-    
-    
 
     /**
      * Reverse the migrations.
