@@ -7,7 +7,7 @@ php artisan make:auth
         php artisan ui vue --auth
         php artisan migrate
 npm install
-npm run dev
+npm run dev eery time change to UI (like Fonts you need to re run )
 
 vim database/database.sqlite
 
