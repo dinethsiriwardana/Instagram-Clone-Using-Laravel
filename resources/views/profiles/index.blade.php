@@ -5,14 +5,16 @@
     <div class="row">
         <div class="col-3 p-5" >
             <img src="{{$user->profile->profileImage()}}" class="rounded-circle w-100">
+
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>
                     {{$user->username}}
+                    <follow_button user-id="{{$user->id}}" follows="{{$follows}}"></follow-button>
                 </h1>
 
-                    <follow_button user-id="{{$user->id}}" follows="{{$follows}}"></follow-button>
+                   
 
                 @can('update',$user->profile)
                 <a href="/p/create">Add New Post</a>

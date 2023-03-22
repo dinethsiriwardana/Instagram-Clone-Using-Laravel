@@ -15,14 +15,12 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
 Route::post('follow/{user}',[App\Http\Controllers\FollowsController::class, 'store']);
 
+Route::get('/', [App\Http\Controllers\PostsControllers::class, 'index']);
 Route::get('/p/create', [App\Http\Controllers\PostsControllers::class, 'create']);
 Route::post('/p', [App\Http\Controllers\PostsControllers::class, 'store']);
 Route::get('/p/{post}', [App\Http\Controllers\PostsControllers::class, 'show']);
