@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="container">
-   <div class="row">
-        <div class="col-5">
+   <div class="row m-5 ">
+        <div class="col-5 m-5">
             <img src="/storage/{{$post->image}}" alt="" class="w-100">
         </div>
-        <div class="col-4">
+        <div class="col-4 m-5">
             <div>
                 <div class="d-flex align-items-center">
                     <div class="pe-3 pb-2">
