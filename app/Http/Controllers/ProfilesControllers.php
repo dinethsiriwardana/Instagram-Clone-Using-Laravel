@@ -13,7 +13,9 @@ class ProfilesControllers extends Controller
     public function index(User $user)
 
     {
-        return view('profiles.index',compact('user')); //home.blade.php
+        $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
+
+        return view('profiles.index',compact('user','follows')); //home.blade.php
     }
 
     public function edit(User $user)

@@ -7,7 +7,7 @@ php artisan make:auth
         php artisan ui vue --auth
         php artisan migrate
 npm install
-npm run dev eery time change to UI (like Fonts you need to re run )
+npm run dev  //every time change to UI (like Fonts you need to re run )
 
 vim database/database.sqlite
 
@@ -37,3 +37,5 @@ $profile = new \App\Models\Profile();
 
 
 composer require intervention/image
+
+php artisan make:policy ProfilePolicy -m Profile 

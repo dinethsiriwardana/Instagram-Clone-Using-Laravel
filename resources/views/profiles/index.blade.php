@@ -12,6 +12,8 @@
                     {{$user->username}}
                 </h1>
 
+                    <follow_button user-id="{{$user->id}}" follows="{{$follows}}"></follow-button>
+
                 @can('update',$user->profile)
                 <a href="/p/create">Add New Post</a>
                 @endcan
@@ -24,8 +26,8 @@
 
             <div class="d-flex">
                 <div class = "pe-5"><strong>{{$user->posts->count()}} </strong>posts</div>
-                <div class = "pe-5"><strong>492 </strong>followers</div>
-                <div class = "pe-5"><strong>337 </strong>following</div>
+                <div class = "pe-5"><strong>{{$user->profile->followers->count()}} </strong>followers</div>
+                <div class = "pe-5"><strong>{{$user->following->count()}} </strong>following</div>
             </div>
             <div class="pt-4"><b>{{$user->profile->title}}</b></div>
             <div>

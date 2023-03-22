@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +21,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('follow/{user}',[App\Http\Controllers\FollowsController::class, 'store']);
+
 Route::get('/p/create', [App\Http\Controllers\PostsControllers::class, 'create']);
-Route::get('/p/{post}', [App\Http\Controllers\PostsControllers::class, 'show']);
 Route::post('/p', [App\Http\Controllers\PostsControllers::class, 'store']);
+Route::get('/p/{post}', [App\Http\Controllers\PostsControllers::class, 'show']);
 
 
 Route::get('/profile/{user}', [App\Http\Controllers\ProfilesControllers::class, 'index'])->name('profile.show');

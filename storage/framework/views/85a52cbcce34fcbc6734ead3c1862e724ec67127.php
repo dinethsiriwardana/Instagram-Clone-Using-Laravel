@@ -11,6 +11,8 @@
 
                 </h1>
 
+                    <follow_button user-id="<?php echo e($user->id); ?>" follows="<?php echo e($follows); ?>"></follow-button>
+
                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('update',$user->profile)): ?>
                 <a href="/p/create">Add New Post</a>
                 <?php endif; ?>
@@ -23,8 +25,8 @@
 
             <div class="d-flex">
                 <div class = "pe-5"><strong><?php echo e($user->posts->count()); ?> </strong>posts</div>
-                <div class = "pe-5"><strong>492 </strong>followers</div>
-                <div class = "pe-5"><strong>337 </strong>following</div>
+                <div class = "pe-5"><strong><?php echo e($user->profile->followers->count()); ?> </strong>followers</div>
+                <div class = "pe-5"><strong><?php echo e($user->following->count()); ?> </strong>following</div>
             </div>
             <div class="pt-4"><b><?php echo e($user->profile->title); ?></b></div>
             <div>
