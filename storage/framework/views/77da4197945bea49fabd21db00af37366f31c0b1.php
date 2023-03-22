@@ -1,35 +1,30 @@
 <?php $__env->startSection('content'); ?>
 <div class="container">
-   <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <div class="row">
-        <div class="col-5 offset-2">
-            <a href="/profile/<?php echo e($post->user->id); ?>">
-                <img src="/storage/<?php echo e($post->image); ?>" alt="" class="w-100">
-            </a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4 offset-2">
-            <div>
-            
-             
-                <p>
-                    <b>
+        <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <a href="/profile/<?php echo e($post->user->id); ?>">
+                    <img src="/storage/<?php echo e($post->image); ?>" alt="" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">
                         <a href="/profile/<?php echo e($post->user->id); ?>" style="text-decoration:none;">
-                            <span class="text-dark"  >
-                                <?php echo e($post->user->username); ?>
-
-                            </span>
+                            <span class="text-dark"><?php echo e($post->user->username); ?></span>
                         </a>
-                    </b> 
-                    <?php echo e($post->caption); ?>
-
-                </p>
+                    </h5>
+                    <p class="card-text"><?php echo e($post->caption); ?></p>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <?php echo e($posts->links()); ?>
 
             </div>
         </div>
     </div>
-    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </div>
 <?php $__env->stopSection(); ?>
 
