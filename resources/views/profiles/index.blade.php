@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5" >
-            <img src="/assets/profile.jpg" class="rounded-circle">
+            <img src="{{$user->profile->profileImage()}}" class="rounded-circle w-100">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
@@ -21,7 +21,7 @@
             @can('update',$user->profile)
                 <a href="/profile/{{$user->id}}/edit">Edit Profile</a>
             @endcan
-            
+
             <div class="d-flex">
                 <div class = "pe-5"><strong>{{$user->posts->count()}} </strong>posts</div>
                 <div class = "pe-5"><strong>492 </strong>followers</div>

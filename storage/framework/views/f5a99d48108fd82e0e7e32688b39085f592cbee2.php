@@ -95,7 +95,7 @@ unset($__errorArgs, $__bag); ?>
                     <div class="row">
                         <label for="image" class="col-md-4 col-form-label ">Profile Image</label>
 
-                        <input type="file" class="form-control-file" id="image" name = "image" src="" alt="">
+                        <input type="file" class="form-control-file" id="image" name="image" src="" alt="">
 
                         <?php $__errorArgs = ['image'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

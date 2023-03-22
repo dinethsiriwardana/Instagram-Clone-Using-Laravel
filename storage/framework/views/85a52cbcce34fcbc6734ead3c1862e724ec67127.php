@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5" >
-            <img src="/assets/profile.jpg" class="rounded-circle">
+            <img src="<?php echo e($user->profile->profileImage()); ?>" class="rounded-circle w-100">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
@@ -20,7 +20,7 @@
             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('update',$user->profile)): ?>
                 <a href="/profile/<?php echo e($user->id); ?>/edit">Edit Profile</a>
             <?php endif; ?>
-            
+
             <div class="d-flex">
                 <div class = "pe-5"><strong><?php echo e($user->posts->count()); ?> </strong>posts</div>
                 <div class = "pe-5"><strong>492 </strong>followers</div>

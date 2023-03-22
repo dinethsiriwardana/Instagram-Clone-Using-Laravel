@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Models\User;
-use Image;
+use app\Models\Post;
+use Intervention\Image\Facades\Image;
+
 
 class PostsControllers extends Controller
 {
