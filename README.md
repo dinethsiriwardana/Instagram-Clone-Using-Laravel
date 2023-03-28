@@ -175,9 +175,7 @@ The following commands were used to develop the project:
 
 		if any error Command "make:auth" is not defined.
 
-		`
-        composer require laravel/ui
-        `
+		`composer require laravel/ui`
         ```sh
 		php artisan ui vue --auth
         ```
