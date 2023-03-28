@@ -152,6 +152,7 @@ php artisan  serve
 7. Access the application by navigating to `http://localhost:8000` in your web browser.
 
 
+
 8. For major Ui chage
 
 ```sh
@@ -174,9 +175,9 @@ The following commands were used to develop the project:
 
 		if any error Command "make:auth" is not defined.
 
-		```sh
+		`
         composer require laravel/ui
-        ```
+        `
         ```sh
 		php artisan ui vue --auth
         ```
