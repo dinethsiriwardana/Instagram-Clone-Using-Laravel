@@ -85,6 +85,10 @@ php artisan serve
 The following commands were used to develop the project:
 
 -   `php artisan make:auth`: Generates the authentication views and routes.
+    if any error   Command "make:auth" is not defined.  
+        composer require laravel/ui  
+        php artisan ui vue --auth
+        php artisan migrate
 -   `composer require laravel/ui`: Installs the Laravel UI package.
 -   `php artisan ui vue --auth`: Generates the authentication views using Vue.js.
 -   `php artisan make:controller ProfilesControllers`: Creates the profiles controller.
