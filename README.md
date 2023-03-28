@@ -170,16 +170,13 @@ The following commands were used to develop the project:
 
 -  `php artisan make:auth`: Generates the authentication views and routes.
 
-  
-
 		if any error Command "make:auth" is not defined.
 
-		
-        composer require laravel/ui
+            composer require laravel/ui
 
-		php artisan ui vue --auth
+            php artisan ui vue --auth
 
-		php artisan migrate
+            php artisan migrate
 
 -  `composer require laravel/ui`: Installs the Laravel UI package.
 
