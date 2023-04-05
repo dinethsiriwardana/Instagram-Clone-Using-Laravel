@@ -158,6 +158,28 @@ php artisan  serve
 npm run dev
 ```
 
+9. Install telescope
+
+  
+  
+
+```sh
+
+composer require laravel/telescope
+
+```
+
+```sh
+
+php artisan telescope:install
+
+```
+
+```sh
+
+php artisan migrate
+
+```
   
 
 ## Additional Commands Used in the Project
