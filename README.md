@@ -170,7 +170,7 @@ dineth@DinethMbook todo % npm run dev
 > mix
 
 /var/folders/xw/gk124w616gj10nddtb3rhqh00000gn/T/development682967692.sh: line 2: mix: command not found
-```sh
+```
 
 run
 ```sh
