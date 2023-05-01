@@ -158,6 +158,25 @@ php artisan  serve
 npm run dev
 ```
 
+if you get this err
+```sh
+dineth@DinethMbook todo % npm run dev
+
+> dev
+> npm run development
+
+
+> development
+> mix
+
+/var/folders/xw/gk124w616gj10nddtb3rhqh00000gn/T/development682967692.sh: line 2: mix: command not found
+```sh
+
+run
+```sh
+npm install --save-dev laravel-mix
+```
+
 9. Install telescope
 
   
